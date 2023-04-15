@@ -1,0 +1,21 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content-inside:nth-child(1) {
+  background-color: salmon;
+}
+
+.content-inside:nth-child(2) {
+  background-color: seagreen;
+}
+
+.content-inside:nth-child(3) {
+  background-color: greenyellow;
+}
+
+.footer {
+  background-color: royalblue;
+}

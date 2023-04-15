@@ -11,13 +11,38 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    title: "方法一：将 .content 的 margin-bottom 设为负数",
+    path: "/margin-bottom",
+    name: "MarginBottom",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+      import(
+        /* webpackChunkName: "margin-bottom" */ "../views/MarginBottom.vue"
+      ),
+  },
+  {
+    title: "方法二：将 .footer 的 margin-top 设为负数",
+    path: "/margin-top",
+    name: "MarginTop",
+    component: () =>
+      import(/* webpackChunkName: "margin-top" */ "../views/MarginTop.vue"),
+  },
+  {
+    title: "方法三：使用 calc() 设置 .content 的高度",
+    path: "/calc",
+    name: "Calc",
+    component: () => import(/* webpackChunkName: "calc" */ "../views/Calc.vue"),
+  },
+  {
+    title: "方法四：使用 Flexbox 弹性布局（推荐）",
+    path: "/flex",
+    name: "Flex",
+    component: () => import(/* webpackChunkName: "flex" */ "../views/Flex.vue"),
+  },
+  {
+    title: "方法五：使用 Grid 网格布局",
+    path: "/grid",
+    name: "Grid",
+    component: () => import(/* webpackChunkName: "grid" */ "../views/Grid.vue"),
   },
 ];
 
@@ -27,4 +52,5 @@ const router = new VueRouter({
   routes,
 });
 
+export { routes };
 export default router;
