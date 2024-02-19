@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev:vue": "vue-cli-service serve",
+    "dev:vanilla": "serve vanilla",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "format": "prettier --cache --write ."
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -24,8 +26,11 @@
     "eslint-plugin-vue": "^6.2.2",
     "lint-staged": "^9.5.0",
     "prettier": "^2.2.1",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-packagejson": "^2.4.7",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "serve": "^14.2.1",
     "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {
